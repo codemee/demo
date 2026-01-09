@@ -1,25 +1,25 @@
-/* 冬日雪景冰藍主題 */
+/* 大自然綠色主題 */
 :root {
-    /* 主色調 - 冰藍 */
-    --primary-color: #58A6FF;        /* 亮冰藍 */
-    --secondary-color: #8BD5FF;      /* 天空淺藍 */
-    --accent-color: #1F4E79;         /* 深夜藍 */
+    /* 主色調 - 大自然綠 */
+    --primary-color: #2E7D32;        /* 森林綠 */
+    --secondary-color: #66BB6A;      /* 草地綠 */
+    --accent-color: #1B5E20;         /* 深森林綠 */
 
-    /* 背景色 - 冬日柔和冷色 */
-    --background-color: #E6F4FF;     /* 霧面淡藍白 */
-    --surface-color: #F9FCFF;        /* 幾乎純白，帶一點藍 */
+    /* 背景色 - 清新自然 */
+    --background-color: #E8F5E9;     /* 霧面淡綠白 */
+    --surface-color: #F7FFF7;        /* 幾乎純白，帶一點綠 */
 
     /* 文字色 */
-    --text-primary: #0F172A;         /* 深靛藍，類似深灰 */
-    --text-secondary: #1F4E79;       /* 深藍 */
+    --text-primary: #0B1F12;         /* 深墨綠黑 */
+    --text-secondary: #1B5E20;       /* 深綠 */
 
-    /* A/B 顏色 - 保持對比但偏冷色一點 */
-    --a-color: #E53935;              /* 鮮紅，用於 A */
-    --b-color: #F6B93B;              /* 暖金黃，用於 B */
+    /* A/B 顏色 - 保持對比 */
+    --a-color: #D32F2F;              /* 莓果紅，用於 A */
+    --b-color: #F9A825;              /* 日光黃，用於 B */
 
-    /* 邊框和陰影 - 冷色陰影 */
-    --border-color: #C5DFF8;         /* 淡藍邊框 */
-    --shadow: 0 2px 10px rgba(15, 23, 42, 0.12);
+    /* 邊框和陰影 - 柔和自然陰影 */
+    --border-color: #C8E6C9;         /* 淡綠邊框 */
+    --shadow: 0 2px 10px rgba(11, 31, 18, 0.12);
 
     /* 間距 */
     --spacing-xs: 0.5rem;
@@ -45,7 +45,7 @@ body {
     background:
         radial-gradient(circle at 10% 0%, rgba(255, 255, 255, 0.65) 0, transparent 55%),
         radial-gradient(circle at 90% 0%, rgba(255, 255, 255, 0.7) 0, transparent 55%),
-        linear-gradient(180deg, #E6F4FF 0%, #C3DDFD 45%, #B3CBEF 100%);
+        linear-gradient(180deg, #E8F5E9 0%, #C8E6C9 45%, #A5D6A7 100%);
     color: var(--text-primary);
     line-height: 1.6;
     min-height: 100vh;
@@ -92,7 +92,7 @@ body {
 
 /* 計時器 */
 .timer-section {
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(227, 241, 255, 0.95));
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(232, 245, 233, 0.95));
     padding: var(--spacing-md);
     border-radius: var(--border-radius);
     border: 2px solid var(--border-color);
@@ -108,7 +108,7 @@ body {
 
 /* 成績區 */
 .records-section {
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(227, 241, 255, 0.95));
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(232, 245, 233, 0.95));
     padding: var(--spacing-md);
     border-radius: var(--border-radius);
     border: 2px solid var(--border-color);
@@ -172,8 +172,8 @@ body {
 .digit-input:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(212, 129, 107, 0.2);
-    background-color: #FFFDF8;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.22);
+    background-color: #F1FFF4;
 }
 
 .digit-input.error {
@@ -202,7 +202,7 @@ body {
 }
 
 .history-list {
-    background: linear-gradient(180deg, rgba(246, 251, 255, 0.95), rgba(222, 237, 255, 0.95));
+    background: linear-gradient(180deg, rgba(247, 255, 247, 0.95), rgba(232, 245, 233, 0.95));
     border: 2px solid var(--border-color);
     border-radius: var(--border-radius);
     max-height: 300px;
@@ -269,7 +269,7 @@ body {
 .btn.primary:hover {
     background-color: var(--accent-color);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(212, 129, 107, 0.3);
+    box-shadow: 0 4px 12px rgba(27, 94, 32, 0.28);
 }
 
 .btn.primary:active {
@@ -296,6 +296,7 @@ body {
 }
 
 /* ---- 冬日雪花特效 ---- */
+/* ---- 飄落特效（配合自然綠色主題） ---- */
 
 .snow-container {
     pointer-events: none;
@@ -308,10 +309,10 @@ body {
 .snowflake {
     position: absolute;
     top: -10%;
-    color: #FFFFFF;
-    opacity: 0.8;
+    color: #E8F5E9;
+    opacity: 0.85;
     font-size: 0.8rem;
-    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.9));
+    filter: drop-shadow(0 0 4px rgba(46, 125, 50, 0.22));
     animation-name: snowfall;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
